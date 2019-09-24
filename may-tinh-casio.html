@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính casio đơn giản</title>
+</head>
+<body>
+<fieldset style="width: 265px">
+    <legend>Caculator</legend>
+<table>
+    <tr>
+        <td>
+            <label for="arg1">Số thứ nhât</label>
+        </td>
+        <td>
+            <input style="width: 175px" id="arg1" type="number">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="arg2">Số thứ hai</label>
+        </td>
+        <td>
+            <input style="width: 175px" id="arg2" type="number">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <td>
+            <button style="width: 42px" type="button" onclick="cong()">+</button>
+            <button style="width: 42px" type="button" onclick="tru()">-</button>
+            <button style="width: 42px" type="button" onclick="nhan()">*</button>
+            <button style="width: 42px" type="button" onclick="chia()">/</button>
+        </td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="result">Kết quả</label>
+        </td>
+        <td>
+            <input style="width: 175px" disabled id="result" type="number">
+        </td>
+    </tr>
+    <script>
+        function cong() {
+            let a = parseInt(document.getElementById("arg1").value);
+            let b = parseInt(document.getElementById("arg2").value);
+            let result = a + b;
+            document.getElementById("result").value = result;
+        }
+
+        function tru() {
+            let a = parseInt(document.getElementById("arg1").value);
+            let b = parseInt(document.getElementById("arg2").value);
+            let result = a - b;
+            document.getElementById("result").value = result;
+        }
+
+        function nhan() {
+            let a = parseInt(document.getElementById("arg1").value);
+            let b = parseInt(document.getElementById("arg2").value);
+            let result = a * b;
+            document.getElementById("result").value = result;
+        }
+
+        function chia() {
+            let a = parseInt(document.getElementById("arg1").value);
+            let b = parseInt(document.getElementById("arg2").value);
+            let result = a / b;
+            document.getElementById("result").value = result;
+        }
+    </script>
+</table>
+</fieldset>
+</body>
+</html>
